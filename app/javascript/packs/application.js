@@ -17,3 +17,6 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 import "controllers"
+import $ from 'jquery'
+import 'bootstrap/dist/js/bootstrap'
+import '../src/stylesheets/application.scss'
