@@ -1,15 +1,27 @@
+<p><strong>Showing results for: </strong><%= @query %></p>
+
 <strong>Photos</strong><br/>
-<% photos.each do |photo| %>
-  <div class='mt-1'>
-    <%= link_to image_tag(url_for(photo.image), height: '40px'), photo %>
-    <%= link_to photo.title, photo %>
-    <br/>
-  </div>
+
+<% if photos.count == 0 %>
+  <p>No search results found</p>
+<% else %>
+  <% photos.each do |photo| %>
+    <div class='mt-1'>
+      <%= link_to image_tag(url_for(photo.image), height: '40px'), photo %>
+      <%= link_to photo.title, photo %>
+      <br/>
+    </div>
+  <% end %>
 <% end %>
 <hr/>
 
 <strong>Users</strong><br/>
-<% users.each do |user| %>
-  <%= link_to user.username, user %><br/>
+
+<% if users.count == 0 %>
+  <p>No search results found</p>
+<% else %>
+  <% users.each do |user| %>
+    <%= link_to user.username, user %><br/>
+  <% end %>
 <% end %>
 

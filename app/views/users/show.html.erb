@@ -8,8 +8,6 @@
           <h5 class="card-title"><%= link_to photo.title, photo %></h5>
           <%= link_to image_tag(url_for(photo.image), width: '100%'), photo %>
           <p class="card-text mt-2"><%= photo.description %></p>
-          <hr/>
-          <%= link_to photo.user.username, photo.user %>
         </div>
       </div>
     <% end %> 
