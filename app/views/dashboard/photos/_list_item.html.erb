@@ -1,0 +1,29 @@
+<template data-target='quick-editable.form'>
+  <%= simple_form_for photo, url: dashboard_photo_path(photo), remote: true do |f| %>
+    <%= f.input :title %>
+
+    <%= f.input :description %>
+
+    <%= f.submit "Save", class: 'btn btn-primary' %>
+  <% end %>
+</template>
+
+<div class='row'>
+  <div class='col-lg-2 u-center-in-column'>
+    <%= link_to image_tag(url_for(photo.image), width: '100%'), dashboard_photo_path(photo) %>
+  </div>
+
+  <div class='col-lg-8 u-centenr-in-column' data-target='quick-editable.replaceableContainer'>
+    <h3><%= link_to photo.title, dashboard_photo_path(photo) %></h3>
+    <p><%= photo.description %></p>
+    <button data-action='click->quick-editable#showForm' class='btn btn-sm btn-info'><%= fa_icon('edit', text: 'Quick Edit') %></button>
+    <%= link_to fa_icon('trash', text: 'Delete'), 
+      dashboard_photo_path(photo), 
+      method: :delete,
+      remote: true, 
+      data: {confirm: 'Are you sure you want to delete this photo?'},
+      class: 'btn btn-sm btn-danger' %>
+
+  </div>
+</div>
+

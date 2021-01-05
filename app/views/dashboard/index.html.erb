@@ -1,0 +1,14 @@
+
+<h1 class='page-title'><%= current_user.username %></h1>
+
+<hr/>
+
+<h2>My Photos</h2>
+
+<ul class='list-group'>
+  <% @photos.each do |photo| %>
+    <li data-controller='quick-editable' class='list-group-item' data-photo-id='<%= photo.id %>'>
+      <%= render partial: 'dashboard/photos/list_item', locals: {photo: photo} %>
+    </li>
+  <% end %>
+</ul>

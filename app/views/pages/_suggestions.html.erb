@@ -1,0 +1,15 @@
+<strong>Photos</strong><br/>
+<% photos.each do |photo| %>
+  <div class='mt-1'>
+    <%= link_to image_tag(url_for(photo.image), height: '40px'), photo %>
+    <%= link_to photo.title, photo %>
+    <br/>
+  </div>
+<% end %>
+<hr/>
+
+<strong>Users</strong><br/>
+<% users.each do |user| %>
+  <%= user.username %><br/>
+<% end %>
+

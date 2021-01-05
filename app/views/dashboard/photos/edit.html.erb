@@ -1,0 +1,9 @@
+<h1 class='page-title'>Edit Photo</h1>
+
+<hr/>
+
+<%= simple_form_for @photo, url: dashboard_photo_path(@photo) do |f| %>
+  <%= render 'form', f: f %>
+
+  <%= f.submit 'Save Photo', class: 'btn btn-primary' %>
+<% end %>

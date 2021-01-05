@@ -1,0 +1,6 @@
+<% if @photo.errors.count == 0 %>
+  var photoListItem = document.querySelector("[data-photo-id='<%= @photo.id %>']")
+  photoListItem.innerHTML = "<%= j render partial: 'dashboard/photos/list_item', locals: {photo: @photo} %>"
+<% else %>
+  alert("<%= @photo.errors.full_messages.to_sentence %>")
+<% end %>
