@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get '/get_suggestions', to: 'pages#get_suggestions', as: :get_suggestions
 
+  resources :users, only: [:show]
+
   resources :photos, only: [:show]
 
   scope :dashboard do
