@@ -4,6 +4,13 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import "bootstrap/scss/bootstrap";
 
+@import "components/search-bar";
+@import "components/navbar";
+
+body {
+  background-color: #f9f9f9;
+}
+
 .page-title {
   margin-top: 20px;
 }

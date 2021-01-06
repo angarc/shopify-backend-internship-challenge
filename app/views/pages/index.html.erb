@@ -1,3 +1,24 @@
+<header class='header'>
+  <div class='container'>
+    <h1 class='header__title'>Find cool images, or upload your own.</h1>
+
+    <div class='search-bar' data-controller='search'>
+      <form class="">
+        <div class="input-group">
+          <input data-action='keyup->search#getSuggestions' data-target='search.input' class="border-right-0 form-control" type="search" placeholder="Search" aria-label="Search">
+          <span class="input-group-append border-left-0">
+              <div data-target='search.searchIcon' class='input-group-text bg-white'>
+                <i class="fa fa-search"></i>
+              </div>
+          </span>
+        </div>
+      </form>
+
+      <div class='search-suggestions hidden' data-target='search.container'></div>
+    </div>
+
+  </div>
+</header>
 
 <div class='container'>
   <div class="card-columns mt-5">

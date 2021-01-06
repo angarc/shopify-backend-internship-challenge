@@ -11,6 +11,7 @@
   }
 
   .search-suggestions {
+    overflow-x: auto;
     z-index: 1;
     border-radius: 0 0 10px 10px;
     position: absolute;
@@ -18,17 +19,25 @@
     border: 1px solid #ccc;
     width: 100%;
     padding: 10px;
+    color: black;
   }
 
   &__photos {
-
     &-title {
       color: black;
 
       &:hover {
-
         text-decoration: none;
       }
     }
+  }
+
+  &__users {
+    &-user {
+      color: black;
+      &:hover {
+        text-decoration: none;
+      }
+    } 
   }
 }

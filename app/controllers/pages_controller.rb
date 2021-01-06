@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-    @photos = Photo.all
+    @photos = Photo.all.order('created_at DESC')
   end
 
   def get_suggestions

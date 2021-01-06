@@ -18,13 +18,14 @@
 
 <hr/>
 
-<strong>Users</strong><br/>
+<div class='search-bar__users'>
+  <strong>Users</strong><br/>
 
-<% if users.count == 0 %>
-  <p>No search results found</p>
-<% else %>
-  <% users.each do |user| %>
-    <%= link_to user.username, user %><br/>
+  <% if users.count == 0 %>
+    <p>No search results found</p>
+  <% else %>
+    <% users.each do |user| %>
+      <%= link_to user.username, user, class: 'search-bar__users-user' %><br/>
+    <% end %>
   <% end %>
-<% end %>
-
+</div>
