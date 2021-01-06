@@ -2,17 +2,20 @@
 
 <strong>Photos</strong><br/>
 
-<% if photos.count == 0 %>
-  <p>No search results found</p>
-<% else %>
-  <% photos.each do |photo| %>
-    <div class='mt-1'>
-      <%= link_to image_tag(url_for(photo.image), height: '40px'), photo %>
-      <%= link_to photo.title, photo %>
-      <br/>
-    </div>
+<div class='search-bar__photos'>
+  <% if photos.count == 0 %>
+    <p>No search results found</p>
+  <% else %>
+    <% photos.each do |photo| %>
+      <div class='mt-1'>
+        <%= link_to image_tag(url_for(photo.image), height: '40px'), photo %>
+        <%= link_to photo.title, photo, class: 'search-bar__photos-title' %>
+        <br/>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
+</div>
+
 <hr/>
 
 <strong>Users</strong><br/>

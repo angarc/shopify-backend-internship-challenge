@@ -14,22 +14,7 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
 }
 
-.search-bar {
-  position: relative;
 
-  .hidden {
-    display: none;
-  }
-
-  .search-suggestions {
-    z-index: 1;
-    margin-top: 9px;
-    border-radius: 0 0 10px 10px;
-    position: absolute;
-    background-color: darken(#f9f9f9, 10%);
-    width: 100%;
-    padding: 10px;
-  }
-}

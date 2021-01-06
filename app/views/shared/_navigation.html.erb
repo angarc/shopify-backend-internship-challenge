@@ -16,10 +16,16 @@
       -->
     </ul>
 
-    <div class='search-bar'  data-controller='search'>
+    <div class='search-bar ' data-controller='search'>
       <form class="form-inline my-2 my-lg-0 mr-auto">
-        <input data-action='keyup->search#getSuggestions' data-target='search.input' class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <div class="input-group">
+          <input data-action='keyup->search#getSuggestions' data-target='search.input' class="border-right-0 form-control" type="search" placeholder="Search" aria-label="Search">
+          <span class="input-group-append border-left-0">
+              <div data-target='search.searchIcon' class='input-group-text bg-white'>
+                <i class="fa fa-search"></i>
+              </div>
+          </span>
+        </div>
       </form>
 
       <div class='search-suggestions hidden' data-target='search.container'></div>
