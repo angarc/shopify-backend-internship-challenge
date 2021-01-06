@@ -1,0 +1,59 @@
+.photo-card {
+  border: none;
+  position: relative;
+  color: transparent;
+  transition: .3s;
+
+  &__title {
+    transition: .3s;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+
+    a {
+      color: inherit;
+      transition: inherit;
+
+      &:hover {
+        text-decoration: none;
+        color: #bbb;
+      }
+    }
+  }
+
+  &__user {
+    transition: .3s;
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+      color: #bbb;
+    }
+  }
+
+  img {
+    transition: .3s;
+  }
+
+  &:hover {
+    color: white !important;
+
+    .photo-card__title {
+      top: 10px;
+      left: 10px;
+    }
+      
+    .photo-card__user {
+      bottom: 10px;
+      right: 10px;
+    }
+
+
+    img {
+      filter: brightness(50%);
+    }
+  }
+}

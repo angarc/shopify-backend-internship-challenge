@@ -3,14 +3,10 @@
   <div class="card-columns mt-5">
 
     <% @photos.each do |photo| %>
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title"><%= link_to photo.title, photo %></h5>
-          <%= link_to image_tag(url_for(photo.image), width: '100%'), photo %>
-          <p class="card-text mt-2"><%= photo.description %></p>
-          <hr/>
-          <%= link_to photo.user.username, photo.user %>
-        </div>
+      <div class="card photo-card">
+        <%= link_to image_tag(url_for(photo.image), width: '100%', class: 'photo-card__image'), photo %>
+        <h5 class="card-title photo-card__title"><%= link_to photo.title, photo %></h5>
+        <%= link_to photo.user.username, photo.user, class: 'photo-card__user' %>
       </div>
     <% end %>
     
