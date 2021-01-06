@@ -26,6 +26,8 @@ gem 'simple_form', '~> 5.0', '>= 5.0.3'
 
 gem 'font-awesome-rails'
 
+gem "mini_magick"
+
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
 
