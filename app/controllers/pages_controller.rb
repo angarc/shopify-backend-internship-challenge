@@ -6,8 +6,8 @@ class PagesController < ApplicationController
   def get_suggestions
     @query = params[:q].downcase
 
+    @photos = Photo.where("LOWER(title) LIKE ? OR LOWER(description) LIKE ?", "%#{@query}%", "% #{@query} %")
     @users = User.where('LOWER(username) LIKE ?', "%#{@query}%").limit(3)
-    @photos = Photo.where('LOWER(title) LIKE ?', "%#{@query}%").limit(5)
 
     respond_to do |format|
       format.html {
