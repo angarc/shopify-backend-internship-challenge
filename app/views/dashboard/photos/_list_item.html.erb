@@ -16,7 +16,7 @@
   <div class='col-lg-8 u-centenr-in-column' data-target='quick-editable.replaceableContainer'>
     <h3><%= link_to photo.title, dashboard_photo_path(photo) %></h3>
     <p><%= photo.description %></p>
-    <button data-action='click->quick-editable#showForm' class='btn btn-sm btn-info'><%= fa_icon('edit', text: 'Quick Edit') %></button>
+    <button data-action='click->quick-editable#showForm' class='btn btn-sm btn-primary'><%= fa_icon('edit', text: 'Quick Edit') %></button>
     <%= link_to fa_icon('trash', text: 'Delete'), 
       dashboard_photo_path(photo), 
       method: :delete,

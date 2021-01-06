@@ -2,31 +2,37 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/regular';
+@import 'components/navbar';
+@import 'components/search-bar';
 
 $primary: #341f97;
 
 @import "bootstrap/scss/bootstrap";
 
-@import "components/search-bar";
-@import "components/navbar";
-
 body {
-  background-color: #f9f9f9;
   font-family: 'Poppins', sans-serif;
-}
-
-.u-text-bold {
-  font-weight: 700;
+  background-color: #f9f9f9;
 }
 
 .page-title {
   font-weight: 700;
-  margin-top: 40px;
 }
 
-.u-center-in-column {
+.u-full-height {
+  height: 100%;
+}
+
+.u-full-height-force {
+  height: calc(100vh - 56px);
+}
+
+.u-center-vertically-in-column {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.form {
+  width: 50%;
 }

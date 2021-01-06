@@ -1,10 +1,8 @@
 
-<h1 class='page-title'><%= current_user.username %></h1>
-
+<h1 class='page-title'>My Profile</h1>
 <hr/>
 
-<h2>My Photos</h2>
-
+<h3 class='u-text-bold mt-5'>My Photos</h3>
 <ul class='list-group'>
   <% @photos.each do |photo| %>
     <li data-controller='quick-editable' class='list-group-item' data-photo-id='<%= photo.id %>'>

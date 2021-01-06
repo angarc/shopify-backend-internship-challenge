@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PhotoRepo</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= javascript_pack_tag 'auth', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'auth', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet"> 
+  </head>
+
+  <body class='u-full-height'>
+    <%= render partial: 'shared/navigation' %>
+    <div class='container u-full-height-force'>
+      <div class='row u-full-height'>
+        <div class='col-lg-12 u-full-height u-center-vertically-in-column'>
+          <div class='form'>
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

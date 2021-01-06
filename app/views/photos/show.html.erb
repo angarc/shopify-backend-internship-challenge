@@ -1,5 +1,6 @@
 <div class='container'>
   <h1 class='page-title'><%= @photo.title %></h1>
+  <p><strong>User: </strong> <%= link_to @photo.user.username, user_path(@photo.user) %></p>
   <div class='row'>
     <div class='col-xl-7 col-lg-12'>
       <%= image_tag url_for(@photo.image), width: '100%', class: 'photo-show-page__image' %>

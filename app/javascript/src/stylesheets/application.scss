@@ -10,6 +10,8 @@ $container-max-widths: (
   xl: 1400px
 ); 
 
+$primary: #341f97;
+
 @import "bootstrap/scss/bootstrap";
 
 @import "./components/all";
