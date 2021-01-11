@@ -1,0 +1,39 @@
+<div class='container'>
+  <h1 class='page-title'>Search Results</h1>
+
+  <hr/>
+
+  <h3 class='text-bold'>Photos</h3>
+
+  <div class="card-columns mt-5">
+    <% if @photos.count > 0 %>
+      <% @photos.each do |photo| %>
+        <div class="card photo-card">
+          <%= link_to image_tag(url_for(photo.image), width: '100%', class: 'photo-card__image'), photo %>
+          <h5 class="card-title photo-card__title"><%= link_to photo.title, photo %></h5>
+          <%= link_to photo.user.username, photo.user, class: 'photo-card__user' %>
+        </div>
+      <% end %>
+    <% else %>
+      <p>No search results found.</p>
+    <% end %>
+  </div>
+
+
+  <hr/>
+
+  <h3 class='text-bold'>Users</h3>
+
+
+  <ul class='list-group'>
+    <% if @users.count > 0 %>
+      <% @users.each do |user| %>
+        <li class='list-group-item'>
+          <%= link_to user.username, user%>
+        </li>      
+      <% end %>
+    <% else %>
+      <p>No search results found.</p>
+    <% end %>
+  </ul>
+</div>
