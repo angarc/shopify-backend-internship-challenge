@@ -12,8 +12,10 @@ module Dashboard
       @photo = current_user.photos.build(photo_params)
 
       image = params[:photo][:image]
-      mini_image = MiniMagick::Image.new(image.tempfile.path)
-      mini_image.resize '1200x1200'
+      if not image.nil?
+        mini_image = MiniMagick::Image.new(image.tempfile.path)
+        mini_image.resize '1200x1200'
+      end
       
       if @photo.save
         flash[:success] = "Created new photo successfully"  
